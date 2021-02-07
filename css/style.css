@@ -23,6 +23,22 @@ img{
 *  common
 *
 -------------------------- */
+/* background image */
+body::before{
+	position: fixed;
+	top:0;
+	left: 0;
+	z-index: -1;
+	display: block;
+	width: 100%;
+	height: 100vh;
+	background: url("../img/common/CRANE_hair_design_logo_bg.png");
+	background-position: center;
+	background-size: 80%;
+	background-repeat: no-repeat;
+  content: "";
+}
+/* ラインマーカー */
 .marker{
   background-image:linear-gradient(180deg,transparent 50%,
   rgb(201,217,218) 50%) ;
@@ -30,7 +46,7 @@ img{
 /* inner */
 .section_wrapper,.header_wrapper,.footer_wrapper{
   margin: 0 auto;
-  padding: 20px;
+  padding: 40px;
   max-width: 1100px;
 }
 .section_wrapper{
@@ -51,7 +67,6 @@ img{
 .flex-container.img-left .content_text{
   margin-left: 0;
 }
-
 /* 要素の出しわけ */
 .sp-item{
   display: none;
@@ -96,6 +111,27 @@ img{
 .left-text_more_btn{
   margin-left: 0;
   width: calc((100% - 40px ) / 2);
+}
+/* page top btn */
+.pagetop_btn{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: 5px 7px;
+  width: fit-content;
+  border-radius: 3px;
+  background-color: #41506f;
+  text-align: center;
+}
+.pagetop_btn a{
+  display: block;
+  color: #fff;
+  font-size: 1.4rem;
+  font-family: 'Source Serif Pro', serif;}
+
+.pagetop_btn img{
+  display: block;
+  width: 44px;
 }
 /* content画像 */
 .content_img{
@@ -267,8 +303,6 @@ box-shadow: 0 2px 3px rgb(51 51 51 / 35%);
   width: 40px;
   transform: translateX(-50%);
 }
-
-
 /*--------------------------
 *
 *  concept
@@ -367,3 +401,80 @@ box-shadow: 0 2px 3px rgb(51 51 51 / 35%);
 *  footer
 *
 -------------------------- */
+#footer{
+  background-image: url(../img/common/footer_bg_03.jpg);
+  color: #fff;
+}
+#footer a{
+  color: #fff;
+}
+#footer .flex-container{
+  align-items: flex-start;
+  justify-content: center;
+}
+.footer_wrapper{
+  padding: 80px 40px 40px 40px;
+}
+.footer_list_item:not(:last-of-type){
+  line-height: 2;
+}
+.footer_list_item{
+  width: calc((100% - 40px)/3);
+}
+.reserve_title,.address_title,.open-time_title{
+  font-size:2.6rem;
+  font-family: 'Source Serif Pro', serif;
+}
+/* Reserve */
+.reserve_lead{
+  margin-bottom: 10px;
+}
+.hotpepper_btn,.tel_btn{
+  width: 80%;
+  height: 40px;
+  border: dashed 2px #fff;
+  text-align: center;
+}
+.hotpepper_btn img,.tei_btn a{
+  line-height: 40px;
+}
+.hotpepper_btn{
+  margin-bottom: 15px;
+}
+.tel_btn i{
+  margin-right: 5px;
+}
+/* Open Time */
+.open-time_title{
+  line-height: 2;
+}
+.time{
+  margin-bottom: 15px;
+  font-size: 2.5rem;
+}
+.time>span{
+  font-size: 1.4rem;
+}
+.holiday{
+  font-size: 2.1rem;
+}
+.holiday_title{
+  margin-bottom: 10px;
+}
+/* footer logo */
+.footer_logo{
+  display: block;
+  margin: 0 auto;
+  margin-top: -30px;
+  width: 147px;
+}
+/* コピーライト */
+small{
+  display: block;
+  width: 100%;
+  height: 63px;
+  background-color: #41506f;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 63px;
+}
