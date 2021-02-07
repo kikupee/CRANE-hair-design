@@ -27,6 +27,7 @@ img{
   background-image:linear-gradient(180deg,transparent 50%,
   rgb(201,217,218) 50%) ;
 }
+/* inner */
 .section_wrapper,.header_wrapper,.footer_wrapper{
   margin: 0 auto;
   padding: 20px;
@@ -41,6 +42,16 @@ img{
   align-items: center;
   justify-content: space-between;
 }
+.flex-container.img-left{
+  flex-direction: row-reverse;
+}
+.flex-container.img-left .content_img{
+  margin-left: 3rem;
+}
+.flex-container.img-left .content_text{
+  margin-left: 0;
+}
+
 /* 要素の出しわけ */
 .sp-item{
   display: none;
@@ -82,6 +93,10 @@ img{
 .more_btn:hover{
   margin-right: 0;
 }
+.left-text_more_btn{
+  margin-left: 0;
+  width: calc((100% - 40px ) / 2);
+}
 /* content画像 */
 .content_img{
   width: calc((100% - 40px) / 2);
@@ -94,11 +109,6 @@ img{
   margin-left: 3em;
   width: calc((100% - 40px ) / 2);
 }
-
-
-
-
-
 /*--------------------------
 *
 *  header
@@ -302,14 +312,33 @@ box-shadow: 0 2px 3px rgb(51 51 51 / 35%);
 *  access
 *
 -------------------------- */
+.access_list{
+  margin-bottom: 30px;
+}
+.access_title{
+  margin-bottom: 10px;
+  font-size: 2.1rem;
+  font-family: 'Source Serif Pro', serif;
+}
+.notice{
+  font-size: 1.4rem;
+}
+
+/* 地図関連 */
 .map_outer{
+  position: relative;
+  padding-top: 61.9%;
+  border: solid 1px #333;
   border-radius: 15px;
   box-shadow: 20px 20px 0 1px #94b6b8;
-  position:relative;
 }
 .map{
-  padding-top:100%;
   position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
 }
 
 /*--------------------------
