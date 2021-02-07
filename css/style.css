@@ -24,20 +24,81 @@ img{
 *
 -------------------------- */
 .marker{
-  background-image:linear-gradient(to right,transparent 50%,
+  background-image:linear-gradient(180deg,transparent 50%,
   rgb(201,217,218) 50%) ;
 }
 .section_wrapper,.header_wrapper,.footer_wrapper{
   margin: 0 auto;
-  padding: 0 20px;
-  width: 1100px;
+  padding: 20px;
+  max-width: 1100px;
 }
+.section_wrapper{
+  padding-top: 80px ;
+}
+/* 横並び */
+.flex-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* 要素の出しわけ */
 .sp-item{
   display: none;
 }
 .pc-item{
   display: block;
 }
+/* section title */
+.section_title{
+  margin: 0 auto;
+  color: #333333;
+  text-align: center;
+}
+.section_title .en_title{
+  display: block;
+  margin: 0 auto;
+  padding: 25px 0;
+  background-image: url(../img/common/section_title_item.png);
+  background-position: center;
+  background-size:contain;
+  background-repeat: no-repeat;
+  font-size: 3.6rem;
+  font-family: 'Source Serif Pro', serif;
+}
+.section_title .ja_title{
+  display: block;
+  margin-bottom: 80px;
+  font-size: 1.4rem;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+/* more btn */
+.more_btn{
+  display: block;
+  margin-right: 20px;
+  margin-left: auto;
+  width: 105px;
+  transition: ease-in .3s;
+}
+.more_btn:hover{
+  margin-right: 0;
+}
+/* content画像 */
+.content_img{
+  width: calc((100% - 40px) / 2);
+}
+.content_img img{
+  border-radius: 15px;
+  box-shadow: 20px 20px 0 1px #94b6b8;
+}
+.content_text{
+  margin-left: 3em;
+  width: calc((100% - 40px ) / 2);
+}
+
+
+
+
+
 /*--------------------------
 *
 *  header
@@ -204,13 +265,29 @@ box-shadow: 0 2px 3px rgb(51 51 51 / 35%);
 *
 -------------------------- */
 .lead{
+  margin-bottom: 80px;
   text-align: center;
+  font-size: 2rem;
+  line-height: 3;
 }
 /*--------------------------
 *
 *  menu
 *
 -------------------------- */
+.menu{
+  width: 100px;
+  /* width: 50%; */
+  font-family: 'Source Serif Pro', serif;
+}
+.price{
+  margin-left: 60px;
+}
+.menu_list_item{
+  display: flex;
+  margin-bottom: 35px;
+}
+
 
 
 /*--------------------------
@@ -225,21 +302,36 @@ box-shadow: 0 2px 3px rgb(51 51 51 / 35%);
 *  access
 *
 -------------------------- */
-
+.map_outer{
+  border-radius: 15px;
+  box-shadow: 20px 20px 0 1px #94b6b8;
+  position:relative;
+}
+.map{
+  padding-top:100%;
+  position:absolute;
+}
 
 /*--------------------------
 *
 *  recruit
 *
 -------------------------- */
-
+.recruit_text{
+  line-height: 2;
+}
 
 /*--------------------------
 *
 *  news
 *
 -------------------------- */
-
+#news .section_title .en_title{
+  background-image: none;
+}
+#news .section_title .ja_title{
+  margin-bottom: 30px;
+}
 
 /*--------------------------
 *
