@@ -339,7 +339,23 @@ box-shadow: 0 2px 3px rgb(51 51 51 / 35%);
 *  style
 *
 -------------------------- */
-
+.style_list_item{
+  margin-left: 30px;
+}
+.style_list{
+  position: relative;
+  margin-bottom: 60px;
+  padding: 30px 0 45px 0;
+  background-color: #c85c2e;
+}
+.style_list::after{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 15px;
+  background-color: #41506f;
+  content: "";
+}
 
 /*--------------------------
 *
